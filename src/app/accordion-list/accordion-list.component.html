@@ -1,3 +1,7 @@
-<section>
-  <app-accordion></app-accordion>
+<section class="section">
+  <ul class="accordions">
+    <li class="accordions__item" *ngFor="let accordion of accordionList">
+      <app-accordion id="{{ accordion }}"></app-accordion>
+    </li>
+  </ul>
 </section>

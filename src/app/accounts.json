@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": "0",
     "title": "Konto na Zero",
     "account_number": "64 9387 1026 8543 1703 5827 9630",
     "balance": "-12.,20",
@@ -14,7 +14,7 @@
     }
   },
   {
-    "id": 1,
+    "id": "1",
     "title": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
     "account_number": "64 9387 1026 8543 1703 5827 9631",
     "balance": "999999999,99",
@@ -28,7 +28,7 @@
     }
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "Konto na Zero",
     "account_number": "64 9387 1026 8543 1703 5827 9632",
     "balance": "12.20",
