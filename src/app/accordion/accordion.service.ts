@@ -27,4 +27,12 @@ export class AccordionService {
 
     return accountsIds;
   }
+
+  getAccountById(id: string): Accordion {
+    for (const account of this.data) {
+      if (account.id === id) {
+        return account;
+      }
+    }
+  }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import Accordion from './Accordion.model';
+import {AccordionService} from './accordion.service';
 
 @Component({
   selector: 'app-accordion',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordionComponent implements OnInit {
 
-  constructor() { }
+  @Input('id')
+  id: string;
+  accordion: Accordion;
+
+  constructor(private accordionService: AccordionService) { }
 
   ngOnInit(): void {
+    this.getAccordionData();
+  }
+
+  getAccordionData(): void {
+    this.accordion = this.accordionService.getAccountById(this.id);
   }
 
 }
