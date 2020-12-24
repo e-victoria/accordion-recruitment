@@ -1,7 +1,7 @@
 @import "../../assets/scss/variables";
 
 .accordions {
-  width: 80%;
+  width: 70%;
   margin: 3em auto 0 auto;
 }
 
@@ -21,10 +21,4 @@
 
 .accordions__item:not(:last-of-type) {
   border-bottom: 0.1em solid $accordion-border-color;
-}
-
-.accordions__item:hover {
-  position: relative;
-  z-index: 2;
-  box-shadow: $accordion-shadow;
 }
