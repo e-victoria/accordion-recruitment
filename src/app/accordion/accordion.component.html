@@ -1,10 +1,20 @@
 <section class="section">
   <h1 class="visually-hidden">Account</h1>
   <div class="accordion">
-    <h2 class="accordion__header">
-      <button class="accordion__header-btn">
-        {{ accordion.title }}
-      </button>
-    </h2>
+    <p class="accordion__bank">{{ accordion.bank }}</p>
+    <div class="accordion__wrapper">
+      <div class="accordion__info">
+        <h2 class="accordion__header">
+          <button class="accordion__header-btn">
+            {{ accordion.title }}
+          </button>
+        </h2>
+        <p class="accordion__account">{{ accordion.account_number }}</p>
+      </div>
+      <div class="accordion__balance balance">
+        <h3 class="balance__header">Dostępne środki</h3>
+        <p class="balance__available {{ accordion.available_amount < 0 ? 'balance__available--negative' : '' }}">{{ accordion.available_amount.toLocaleString('fr') }} <span class="balance__currency">{{ accordion.currency }}</span></p>
+      </div>
+    </div>
   </div>
 </section>

@@ -12,7 +12,12 @@
   src: url("assets/fonts/Roboto/Roboto-Medium.ttf");
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
+  color: $default-font-color;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   background-color: $body-background-color;

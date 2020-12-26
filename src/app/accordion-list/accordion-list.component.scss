@@ -1,8 +1,8 @@
 @import "../../assets/scss/variables";
 
 .accordions {
-  width: 70%;
-  margin: 3em auto 0 auto;
+  width: 65%;
+  margin: 3rem auto 0 auto;
 }
 
 .accordions__list {
@@ -10,9 +10,9 @@
   padding: 0;
   list-style-type: none;
   box-shadow: $accordion-list-shadow;
-  border: 0.1em solid $accordion-border-color;
+  border: 0.1rem solid $accordion-border-color;
   background-color: $accordion-background-color;
-  border-radius: 0.25em;
+  border-radius: 0.25rem;
 }
 
 .accordions__item {

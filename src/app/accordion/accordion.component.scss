@@ -1,10 +1,87 @@
 @import "../../assets/scss/variables";
 
 .accordion {
-  cursor: pointer;
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+}
+
+.accordion__wrapper {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.accordion__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.balance__header {
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: lighten($default-font-color, 20%);
+}
+
+.balance__available {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.03rem;
+}
+
+.balance__currency {
+  font-size: 1.2rem;
+}
+
+.balance__available--negative {
+  color: red;
 }
 
 .accordion__header {
   margin: 0;
+  margin-bottom: 0.9rem;
+}
+
+.accordion__header-btn {
+  width: 100%;
+  padding: 0;
+  color: $default-font-color;
+  font-size: 1.45rem;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    color: #000000;
+  }
+}
+
+.accordion__bank {
+  margin: 0;
+  margin-bottom: 0.8rem;
+  max-width: 85%;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  align-self: flex-start;
+  padding: 0.3rem 0.4rem;
+  border-radius: 2px;
+  background-color: $accordion-bank-background;
+  font-size: 1rem;
+}
+
+.accordion__account {
+  font-size: 1.05rem;
+  margin: 0;
+  color: lighten($default-font-color, 20%);
 }
