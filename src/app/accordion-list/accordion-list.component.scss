@@ -22,3 +22,9 @@
 .accordions__item:not(:last-of-type) {
   border-bottom: 0.1em solid $accordion-border-color;
 }
+
+@media (max-width: 768px) {
+  .accordions {
+    width: 90%;
+  }
+}
