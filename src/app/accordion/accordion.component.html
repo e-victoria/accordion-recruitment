@@ -23,11 +23,19 @@
       <div #additionalInfo class="accordion__additional-info additional-info hidden">
         <div class="additional-info__balance-wrapper">
           <div class="additional-info__balance">
-            <p class="additional-info__balance-item">Saldo<span class="{{ accordion.balance < 0 ? 'balance__available--negative' : '' }}">{{ accordion.balance }} {{ accordion.currency }}</span></p>
-            <p class="additional-info__balance-item">Blokady<span class="{{ accordion.blocked_amount < 0 ? 'balance__available--negative' : '' }}">{{ accordion.blocked_amount }} {{ accordion.currency }}</span></p>
+            <div class="additional-info__balance-item">
+              <p class="additional-info__balance-item-title">Saldo</p>
+              <p class="{{ accordion.balance < 0 ? 'balance__available--negative' : '' }}">{{ accordion.balance.toLocaleString('fr') }} {{ accordion.currency }}</p>
+            </div>
+            <div class="additional-info__balance-item">
+              <p class="additional-info__balance-item-title">Blokady</p>
+              <p class="{{ accordion.blocked_amount < 0 ? 'balance__available--negative' : '' }}">{{ accordion.blocked_amount.toLocaleString('fr') }} {{ accordion.currency }}</p>
+            </div>
           </div>
           <div class="additional-info__balance">
-
+            <p class="additional-info__available-title">Dostępne środki</p>
+            <p *ngIf="accordion.renewable_limit.overall > 0" class="additional-info__available-title">w tym limit odnawialny: {{ accordion.renewable_limit.overall.toLocaleString('fr') }}</p>
+            <p class="additional-info__available-balance {{ accordion.available_amount < 0 ? 'balance__available--negative' : '' }}"><span>{{ accordion.available_amount.toLocaleString('fr') }}</span> {{ accordion.currency }}</p>
           </div>
         </div>
         <div class="additional-info__btn-wrapper">

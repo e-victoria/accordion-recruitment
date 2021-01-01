@@ -126,7 +126,7 @@
 .accordion__account {
   font-size: 1.05rem;
   margin: 0;
-  color: lighten($default-font-color, 20%);
+  color: lighten($default-font-color, 18%);
 }
 
 .additional-info {
@@ -135,7 +135,58 @@
 }
 
 .additional-info__balance-wrapper {
-  align-self: flex-end;
+  margin-top: 1.5rem;
+  display: grid;
+  justify-content: flex-end;
+  grid-auto-flow: column;
+  margin-bottom: 1.5rem;
+}
+
+.additional-info__balance {
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.additional-info__balance:first-child {
+  padding-right: 2rem;
+  border-right: 0.17rem solid darken($accordion-border-color, 10%);
+}
+
+.additional-info__balance:last-child {
+  padding-left: 2rem;
+  align-items: flex-end;
+}
+
+.additional-info__balance-item {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.additional-info__balance p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: lighten($default-font-color, 18%);
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.additional-info__balance-item .additional-info__balance-item-title {
+  margin-right: 0.7rem;
+}
+
+.additional-info__balance .additional-info__available-balance {
+  font-size: 1.5rem;
+  color: $default-font-color;
+
+  & span {
+    font-size: 2rem;
+    color: darken($default-font-color, 15%);
+  }
 }
 
 .additional-info__btn-wrapper {

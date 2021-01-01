@@ -40,6 +40,9 @@ export class AccordionService {
         if (typeof account.balance === 'string') {
           account.balance = parseFloat(account.balance);
         }
+        if (typeof account.renewable_limit.overall === 'string') {
+          account.renewable_limit.overall = parseFloat(account.renewable_limit.overall);
+        }
         return account;
       }
     }

@@ -10,4 +10,10 @@ export default interface Accordion {
   available_amount: number;
   bank: string;
   canTransfer: boolean;
+  renewable_limit: RenewableLimit;
+}
+
+export interface RenewableLimit {
+  overall: number;
+  used: number;
 }
