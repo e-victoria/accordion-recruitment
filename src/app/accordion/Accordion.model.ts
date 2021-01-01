@@ -9,4 +9,5 @@ export default interface Accordion {
   blocked_amount: number;
   available_amount: number;
   bank: string;
+  canTransfer: boolean;
 }

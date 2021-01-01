@@ -5,7 +5,8 @@ import { Approutes } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionListComponent } from './accordion-list/accordion-list.component';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {RouterModule} from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     RouterModule.forRoot(Approutes),
   ],
   providers: [],

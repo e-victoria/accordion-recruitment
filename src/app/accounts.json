@@ -11,7 +11,8 @@
     "renewable_limit": {
       "overall": "",
       "used": ""
-    }
+    },
+    "canTransfer": false
   },
   {
     "id": "1",
@@ -25,7 +26,8 @@
     "renewable_limit": {
       "overall": "999999999.99",
       "used": "0"
-    }
+    },
+    "canTransfer": true
   },
   {
     "id": "2",
@@ -39,6 +41,7 @@
     "renewable_limit": {
       "overall": "",
       "used": ""
-    }
+    },
+    "canTransfer": false
   }
 ]

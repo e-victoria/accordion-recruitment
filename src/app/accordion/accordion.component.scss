@@ -1,9 +1,18 @@
 @import "../../assets/scss/variables";
 
 .accordion {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.15rem;
+}
+
+.accordion--expanded {
+  box-shadow: 0 1px 6px darken($accordion-border-color, 10%),
+              0 2px 12px darken($accordion-border-color, 6%),
+              0 3px 18px darken($accordion-border-color, 3%),
+              0 4px 25px $accordion-border-color;
+  border-radius: 3px;
 }
 
 .accordion__wrapper {
@@ -11,9 +20,39 @@
   grid-template-columns: 70% 30%;
 }
 
+.accordion--expanded .accordion__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .accordion__info {
   display: flex;
   flex-direction: column;
+}
+
+.accordion__info-btn {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $body-background-color;
+
+  & span {
+    width: 4px;
+    height: 4px;
+    background-color: lighten($blue, 8%);
+    border-radius: 50%;
+  }
+
+  & span:not(:last-child) {
+    margin-bottom: 3px;
+  }
 }
 
 .balance {
@@ -47,6 +86,10 @@
 .accordion__header {
   margin: 0;
   margin-bottom: 0.9rem;
+}
+
+.accordion--expanded .accordion__header {
+  width: 90%;
 }
 
 .accordion__header-btn {
@@ -84,4 +127,42 @@
   font-size: 1.05rem;
   margin: 0;
   color: lighten($default-font-color, 20%);
+}
+
+.additional-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.additional-info__balance-wrapper {
+  align-self: flex-end;
+}
+
+.additional-info__btn-wrapper {
+  display: flex;
+  justify-content: flex-end
+}
+
+.additional-info__btn {
+  width: 32.5%;
+  padding: 0.9rem 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.15rem;
+  color: $default-font-color;
+  border-radius: 7px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0.17rem solid darken($accordion-border-color, 10%);
+
+  &:not(:first-child) {
+    margin-left: calc(100% - (32.5% * 3));
+  }
+}
+
+.additional-info__btn--transfer {
+  color: #ffffff;
+  background-color: $blue;
+  border-radius: 7px 0 7px 0;
+  border: none;
 }

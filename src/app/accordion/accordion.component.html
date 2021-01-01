@@ -1,19 +1,40 @@
 <section class="section">
   <h1 class="visually-hidden">Account</h1>
-  <div class="accordion">
+  <div #accordionEl class="accordion">
+    <div #infoBtn class="accordion__info-btn hidden">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <p class="accordion__bank">{{ accordion.bank }}</p>
     <div class="accordion__wrapper">
       <div class="accordion__info">
         <h2 class="accordion__header">
-          <button class="accordion__header-btn">
+          <button class="accordion__header-btn" (click)="showDetails()" type="button">
             {{ accordion.title }}
           </button>
         </h2>
         <p class="accordion__account">{{ accordion.account_number }}</p>
       </div>
-      <div class="accordion__balance balance">
+      <div #balance class="accordion__balance balance">
         <h3 class="balance__header">Dostępne środki</h3>
         <p class="balance__available {{ accordion.available_amount < 0 ? 'balance__available--negative' : '' }}">{{ accordion.available_amount.toLocaleString('fr') }} <span class="balance__currency">{{ accordion.currency }}</span></p>
+      </div>
+      <div #additionalInfo class="accordion__additional-info additional-info hidden">
+        <div class="additional-info__balance-wrapper">
+          <div class="additional-info__balance">
+            <p class="additional-info__balance-item">Saldo<span class="{{ accordion.balance < 0 ? 'balance__available--negative' : '' }}">{{ accordion.balance }} {{ accordion.currency }}</span></p>
+            <p class="additional-info__balance-item">Blokady<span class="{{ accordion.blocked_amount < 0 ? 'balance__available--negative' : '' }}">{{ accordion.blocked_amount }} {{ accordion.currency }}</span></p>
+          </div>
+          <div class="additional-info__balance">
+
+          </div>
+        </div>
+        <div class="additional-info__btn-wrapper">
+          <button class="additional-info__btn" type="button">Szczegóły</button>
+          <button class="additional-info__btn" type="button">Historia</button>
+          <button *ngIf="accordion.canTransfer" class="additional-info__btn additional-info__btn--transfer" type="button">Przelew</button>
+        </div>
       </div>
     </div>
   </div>
