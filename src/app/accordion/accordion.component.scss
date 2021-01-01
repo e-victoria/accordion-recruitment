@@ -205,9 +205,15 @@
   cursor: pointer;
   background-color: transparent;
   border: 0.17rem solid darken($accordion-border-color, 10%);
+  transition: all 300ms ease-in-out;
 
   &:not(:first-child) {
     margin-left: calc(100% - (32.5% * 3));
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 5px darken($accordion-background-color, 10%), 1px 1px 8px darken($accordion-background-color, 5%);
+    color: #000000;
   }
 }
 
@@ -216,4 +222,10 @@
   background-color: $blue;
   border-radius: 7px 0 7px 0;
   border: none;
+
+  &:hover {
+    color: #ffffff;
+    background-color: lighten($blue, 5%);
+    box-shadow: 1px 1px 5px darken($accordion-background-color, 10%);
+  }
 }
