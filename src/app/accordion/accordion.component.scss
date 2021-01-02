@@ -1,5 +1,18 @@
 @import "../../assets/scss/variables";
 
+@keyframes expandAccordion {
+  0% {
+    margin-top: -7rem;
+    transform: scaleY(0.3);
+  }
+
+  100% {
+    margin-top: 0;
+    transform: scaleY(1);
+  }
+}
+
+
 .accordion {
   position: relative;
   display: flex;
@@ -13,6 +26,9 @@
               0 3px 18px darken($accordion-border-color, 3%),
               0 4px 25px $accordion-border-color;
   border-radius: 3px;
+  animation-name: expandAccordion;
+  animation-duration: 370ms;
+  animation-timing-function: ease-in-out;
 }
 
 .accordion__wrapper {
@@ -86,7 +102,7 @@
 }
 
 .balance__available--negative {
-  color: red;
+  color: red !important;
 }
 
 .accordion__header {
