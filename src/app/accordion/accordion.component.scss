@@ -181,6 +181,10 @@
   }
 }
 
+.additional-info__available-title {
+  text-align: right;
+}
+
 .additional-info__balance-item .additional-info__balance-item-title {
   margin-right: 0.7rem;
 }
@@ -233,5 +237,64 @@
     color: #ffffff;
     background-color: lighten($blue, 5%);
     box-shadow: 1px 1px 5px darken($accordion-background-color, 10%);
+  }
+}
+
+@media (max-width: 992px) {
+  .accordion__header-btn {
+    font-size: 1.35rem;
+  }
+
+  .accordion__bank {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .accordion__account {
+    font-size: 1rem;
+  }
+
+  .additional-info__balance .additional-info__available-balance {
+    font-size: 1.4rem;
+
+    & span {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion__header-btn {
+    font-size: 1.25rem;
+  }
+
+  .accordion__account {
+    font-size: 0.95rem;
+  }
+
+  .accordion__bank {
+    margin-bottom: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .balance__header {
+    font-size: 1rem;
+  }
+
+  .additional-info__balance .additional-info__available-balance {
+    font-size: 1.3rem;
+
+    & span {
+      font-size: 1.8rem;
+    }
+  }
+
+  .additional-info__btn {
+    width: 32%;
+    padding: 0.8rem 0;
+
+    &:not(:first-child) {
+      margin-left: calc(100% - (32% * 3));
+    }
   }
 }

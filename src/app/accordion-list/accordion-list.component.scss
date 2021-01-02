@@ -23,6 +23,12 @@
   border-bottom: 0.1em solid $accordion-border-color;
 }
 
+@media (max-width: 992px) {
+  .accordions {
+    width: 80%;
+  }
+}
+
 @media (max-width: 768px) {
   .accordions {
     width: 90%;
