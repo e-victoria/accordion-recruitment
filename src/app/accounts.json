@@ -1,0 +1,47 @@
+[
+  {
+    "id": "0",
+    "title": "Konto na Zero",
+    "account_number": "64 9387 1026 8543 1703 5827 9630",
+    "balance": "-12.20",
+    "currency": "PLN",
+    "blocked_amount": "12262.59",
+    "available_amount": "1035.27",
+    "bank": "PKO Bank Polski",
+    "renewable_limit": {
+      "overall": "",
+      "used": ""
+    },
+    "canTransfer": false
+  },
+  {
+    "id": "1",
+    "title": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+    "account_number": "64 9387 1026 8543 1703 5827 9631",
+    "balance": "999.99",
+    "currency": "PLN",
+    "blocked_amount": "-999999999.99",
+    "available_amount": "999999999.99",
+    "bank": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+    "renewable_limit": {
+      "overall": "999999999.99",
+      "used": "0"
+    },
+    "canTransfer": true
+  },
+  {
+    "id": "2",
+    "title": "Konto na Zero",
+    "account_number": "64 9387 1026 8543 1703 5827 9632",
+    "balance": "12.20",
+    "currency": "PLN",
+    "blocked_amount": "12262.59",
+    "available_amount": "-999999999.99",
+    "bank": "PKO Bank Polski",
+    "renewable_limit": {
+      "overall": "",
+      "used": ""
+    },
+    "canTransfer": false
+  }
+]

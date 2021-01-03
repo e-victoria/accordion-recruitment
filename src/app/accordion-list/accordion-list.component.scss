@@ -1,0 +1,36 @@
+@import "../../assets/scss/variables";
+
+.accordions {
+  width: 65%;
+  margin: 3rem auto 0 auto;
+}
+
+.accordions__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-shadow: $accordion-list-shadow;
+  border: 0.1rem solid $accordion-border-color;
+  background-color: $accordion-background-color;
+  border-radius: 0.25rem;
+}
+
+.accordions__item {
+  background-color: $accordion-background-color;
+}
+
+.accordions__item:not(:last-of-type) {
+  border-bottom: 0.1em solid $accordion-border-color;
+}
+
+@media (max-width: 992px) {
+  .accordions {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordions {
+    width: 90%;
+  }
+}
