@@ -34,3 +34,9 @@
     width: 90%;
   }
 }
+
+@media (max-width: 576px) {
+  .accordions {
+    margin: 1rem auto;
+  }
+}
