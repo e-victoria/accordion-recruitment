@@ -321,6 +321,25 @@
     flex-direction: column;
   }
 
+  .accordion--expanded .accordion__bank {
+    max-width: 80%;
+  }
+
+  .accordion--expanded .accordion__header {
+    width: 95%;
+  }
+
+  .accordion__account {
+    margin-bottom: 1rem;
+  }
+
+  .accordion__info-btn {
+    width: 29px;
+    height: 29px;
+    top: 1.2rem;
+    right: 0.65rem;
+  }
+
   .additional-info__balance-wrapper {
     margin-top: 2.5rem;
     display: flex;
