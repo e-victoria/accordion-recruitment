@@ -314,3 +314,30 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .accordion__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .additional-info__balance-wrapper {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .additional-info__balance:first-child {
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    border-right: none;
+    border-bottom: 0.17rem solid darken($accordion-border-color, 10%);;
+  }
+
+  .additional-info__balance:last-child {
+    padding-left: 0;
+    padding-top: 1.5rem;
+    align-items: flex-end;
+  }
+}
